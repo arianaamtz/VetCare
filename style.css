@@ -1,0 +1,600 @@
+:root {
+    --verde: #5eb55f;        
+    --verdebtn: #9bb9b7;     
+    --blanco: #ffffff;      
+    --amarillo: #ffe98d;     
+    --verde-claro: #c9ffbe;  
+    --gris: #ebecee;         
+    --negro: #000000;        
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-tap-highlight-color: transparent; 
+}
+
+body {
+    background-color: var(--gris);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+}
+
+.mascota.añadir,
+.apartado.disponible,
+.btn-regresar {
+    text-decoration: none;
+    color: inherit;
+}
+
+.pantalla-sesion,
+.pantalla-inicio,
+.pantalla-nueva-mascota,
+.pantalla-citas,
+.pantalla-vacunas {
+    background-color: var(--gris);
+    width: 100%;
+    max-width: 412px;        
+    min-height: 100vh;      
+    display: flex;
+    flex-direction: column;
+    position: relative;      
+    box-shadow: 0 0 20px rgba(0,0,0,0.1); 
+}
+
+.encabezado {
+    background-color: var(--verde);
+    color: var(--negro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border-bottom: 2px solid #529e52;
+    flex-shrink: 0;         
+    height: 60px;            
+}
+
+.contenido-inicio,
+.contenido-nueva-mascota,
+.main-citas,
+.main-vacunas {
+    flex: 1;
+    padding: 20px;
+    padding-bottom: 95px;    
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    overflow-y: auto;       
+}
+
+.contenido-inicio::-webkit-scrollbar,
+.contenido-nueva-mascota::-webkit-scrollbar,
+.main-citas::-webkit-scrollbar,
+.main-vacunas::-webkit-scrollbar {
+    display: none;
+}
+
+.informacion,
+.rutinas,
+.citas,
+.vacunas,
+.contenedor-formulario { 
+    background: var(--blanco);
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.contenedor-formulario { 
+    border-radius: 20px;
+}
+
+.info-citas, 
+.inf-vacunas-aplicadas, 
+.inf-vacunas-pendientes {
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column; 
+    gap: 6px;
+}
+
+.info-citas p, 
+.inf-vacunas-aplicadas p, 
+.inf-vacunas-pendientes p {
+    font-size: 14px;
+    color: var(--negro);
+}
+
+.info-citas p strong, 
+.inf-vacunas-aplicadas p strong, 
+.inf-vacunas-pendientes p strong {
+    color: var(--negro);
+    font-weight: 600;
+}
+
+.datos-usuario label,
+.datos-contraseña label,
+.form-mascota label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--negro);
+}
+
+.btn-iniciar, 
+.btn-aceptar {
+    background-color: var(--verdebtn);
+    color: #1e3334;
+    border: none;
+    padding: 14px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-iniciar:active, 
+.btn-aceptar:active, 
+.btn-registrar:active { 
+    background-color: #839697;
+}
+
+.inicio-sesion {
+    background: url('img/fondo.png');
+    background-size: cover;
+    background-position: center;
+    color: var(--blanco);
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 30px;
+}
+
+.inicio-sesion .encabezado-login {
+    background: none;
+    border: none;
+    padding: 0;
+    color: var(--blanco);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 450px;
+    justify-content: flex-start;
+}
+
+.inicio-sesion .encabezado-login h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--blanco);
+}
+
+.eslogan { 
+    text-align: left;
+    width: 100%;
+    max-width: 450px;
+}
+
+.eslogan h1 { 
+    font-size: 42px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.eslogan p { 
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.formulario-sesion { 
+    display: flex;
+    flex-direction: column; 
+    gap: 15px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.inicio-sesion label { 
+    color: var(--blanco);
+}
+
+.barra-usuario, 
+.barra-contraseña { 
+    background: var(--blanco);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.barra-usuario i, 
+.barra-contraseña i { 
+    color: #999;
+    font-size: 16px;
+}
+
+.barra-usuario input, 
+.barra-contraseña input { 
+    width: 100%;
+    border: none;
+    padding: 12px 10px;
+    border-radius: 30px;
+    font-size: 14px;
+    outline: none;
+    color: var(--negro);
+}
+
+.contraseña-olvidada { 
+    color: var(--blanco);
+    text-align: right;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.crear-cuenta { 
+    text-align: center;
+    font-size: 14px;
+}
+
+.crear-cuenta a { 
+    color: var(--blanco);
+    font-weight: 700;
+}
+
+.zona-mascotas { 
+    background: var(--blanco);
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    margin: -20px -20px 5px -20px; 
+    border-bottom: 1px solid #ddd;
+    overflow-x: auto;
+    flex-shrink: 0;
+    justify-content: flex-start;  
+}
+
+.zona-mascotas::-webkit-scrollbar { 
+    display: none; 
+}
+
+.mascota { 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    font-size: 12px;
+    font-weight: bold;
+    min-width: 70px;
+    cursor: pointer;
+}
+
+.foto-mascota { 
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid transparent;
+    background: #e0e0e0;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.mascota.activa .foto-mascota { 
+    border-color: var(--verde);
+}
+
+.foto-mascota img { 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.foto-mascota.btn { 
+    font-size: 20px;
+    color: #888;
+}
+
+.recordatorios { 
+    background-color: var(--amarillo);
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    padding: 15px;
+}
+
+.recordatorios h3 { 
+    font-size: 14px;
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+
+.info-mascota { 
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.info-foto { 
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.info-mascota h3 { 
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.info-mascota p { 
+    font-size: 13px;
+    color: #333;
+    margin-top: 2px;
+}
+
+.rutina { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.rutina h3 { 
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.icono-agregar-rutina { 
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #bbb;
+    cursor: pointer;
+}
+
+.tarea { 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.accesos { 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.apartado { 
+    background: var(--blanco);
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    padding: 15px 4px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.apartado i { 
+    font-size: 26px;
+}
+
+.font-icon-blue { color: #4a90e2; }
+.font-icon-gray { color: #7f8c8d; }
+.font-icon-cyan { color: #1abc9c; }
+
+.proximas-citas, 
+.aplicadas, 
+.pendientes { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.proximas-citas h3, 
+.aplicadas h3, 
+.pendientes h3 { 
+    font-size: 14px;
+    font-weight: 700;
+    color: #222;
+}
+
+.btn-citas, 
+.btn-vacunas { 
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #bbb;
+    cursor: pointer;
+}
+
+.inf-vacunas-aplicadas, 
+.inf-vacunas-pendientes, 
+.info-citas { 
+    background-color: var(--verde-claro);
+    border: 1px solid #a3e0a3;
+}
+
+.margin-b { 
+    margin-bottom: 15px;
+}
+
+.btn-registrar {
+    background-color: var(--verdebtn);
+    color: #1e3334;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #7a8f90;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.agrega-foto { 
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.icono-añadir-foto { 
+    width: 65px;
+    height: 65px;
+    background-color: var(--gris);
+    border-radius: 50%;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    margin: 0 auto 15px auto;
+    font-size: 20px;
+    color: #555;
+}
+
+.form-mascota { 
+    display: flex;
+    flex-direction: column; 
+    gap: 12px;
+}
+
+.guarda-dato { 
+    background-color: var(--gris);
+    border: none;
+    padding: 12px 16px;
+    border-radius: 20px;
+    width: 100%;
+    outline: none;
+    font-size: 14px;
+}
+
+.peso-edad { 
+    display: flex;
+    gap: 10px;
+}
+
+.peso-edad div { 
+    flex: 1;
+}
+
+.selector-especie { 
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0 10px 0;
+    gap: 10px;
+}
+
+.especie { 
+    background: var(--gris);
+    padding: 12px 4px;
+    border-radius: 14px;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 6px;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.especie span { 
+    font-size: 12px;
+    font-weight: 700;
+    color: #444;
+}
+
+.especie.activo { 
+    background: var(--verde-claro);
+    border: 1px solid var(--verde);
+}
+
+.img-especie { 
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.parte-inferior { 
+    background-color: var(--verde);
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    border-top: 2px solid #529e52;
+    flex-shrink: 0;
+    position: fixed;        
+    bottom: 0;
+    left: 50%;              
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 412px;        
+    z-index: 1000;            
+}
+
+.nav-btn { 
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #114c2c;
+    opacity: 0.4;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.nav-btn.active, 
+.nav-btn.activo { 
+    opacity: 1;              
+}
+
+@media (min-width: 768px) {
+    .pantalla-inicio .parte-inferior,
+    .pantalla-nueva-mascota .parte-inferior,
+    .pantalla-citas .parte-inferior,
+    .pantalla-vacunas .parte-inferior {
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 370px;
+        border-radius: 30px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        border-top: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .pantalla-sesion,
+    .pantalla-inicio,
+    .pantalla-nueva-mascota,
+    .pantalla-citas,
+    .pantalla-vacunas {
+        max-width: 100%;
+    }
+}

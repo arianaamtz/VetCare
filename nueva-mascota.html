@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Nueva Mascota</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#5eb55f">
+</head>
+<body>
+
+    <div class="pantalla-nueva-mascota">
+        <header class="encabezado">
+            <a href="pantalla-principal.html" class="btn-regresar"><i class="fa-solid fa-arrow-left"></i></a>
+            <h2>Nueva Mascota</h2>
+            <span class="icono-huellita"><i class="fa-solid fa-paw"></i></span>
+        </header>
+
+        <main class="contenido-nueva-mascota">
+            <div class="contenedor-formulario">
+                <p class="agrega-foto">Agrega una foto de perfil</p>
+                <div class="icono-añadir-foto" style="cursor: pointer;" onclick="alert('Esta sección está en desarrollo.')"><i class="fa-solid fa-plus"></i></div>
+
+                <form class="form-mascota" onsubmit="event.preventDefault(); aceptarMascota();">
+                    <label>Nombre</label>
+                    <input type="text" placeholder="Ingresa el nombre de tu mascota" class="guarda-dato" required>
+
+                    <div class="peso-edad">
+                        <div>
+                            <label>Peso</label>
+                            <input type="text" placeholder="En kg" class="guarda-dato">
+                        </div>
+                        <div>
+                            <label>Edad</label>
+                            <input type="text" placeholder="Años" class="guarda-dato">
+                        </div>
+                    </div>
+
+                    <label>Raza</label>
+                    <input type="text" placeholder="Ingresa la raza" class="guarda-dato">
+
+                    <label>Sexo</label>
+                    <input type="text" placeholder="Macho / Hembra" class="guarda-dato">
+
+                    <label>Señas Particulares</label>
+                    <input type="text" placeholder="¿Tiene alguna seña?" class="guarda-dato">
+
+                    <label>Especie</label>
+                    <div class="selector-especie">
+                        <div class="especie activo" id="especie-1" onclick="elegirEspecie(1, 'Perro')">
+                            <img src="img/perro.png" alt="Perro" class="img-especie">
+                            <span>Perro</span>
+                        </div>
+                        <div class="especie" id="especie-2" onclick="elegirEspecie(2, 'Gato')">
+                            <img src="img/gato.png" alt="Gato" class="img-especie">
+                            <span>Gato</span>
+                        </div>
+                        <div class="especie" id="especie-3" onclick="elegirEspecie(3, 'Conejo')">
+                            <img src="img/conejo.png" alt="Conejo" class="img-especie">
+                            <span>Conejo</span>
+                        </div>
+                        <div class="especie" id="especie-4" onclick="elegirEspecie(4, 'Otro')">
+                            <img src="img/otro.png" alt="Otro" class="img-especie">
+                            <span>Otro</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-aceptar">Aceptar</button>
+                </form>
+            </div>
+        </main>
+
+        <nav class="parte-inferior">
+            <a href="pantalla-principal.html" class="nav-btn"><i class="fa-solid fa-house"></i></a>
+            <a href="citas.html" class="nav-btn"><i class="fa-solid fa-calendar-days"></i></a>
+            <a href="#" class="nav-btn" onclick="alert('Esta sección está en desarrollo.')"><i class="fa-solid fa-comment-dots"></i></a>
+            <a href="#" class="nav-btn" onclick="alert('Esta sección está en desarrollo.')"><i class="fa-solid fa-user"></i></a>
+        </nav>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

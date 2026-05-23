@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Vacunas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#5eb55f">
+</head>
+<body>
+
+    <div class="pantalla-vacunas">
+        <header class="encabezado">
+            <a href="pantalla-principal.html" class="btn-regresar"><i class="fa-solid fa-arrow-left"></i></a>
+            <h2>Cartilla de Vacunación</h2>
+            <span class="icono-huellita"><i class="fa-solid fa-paw"></i></span>
+        </header>
+
+        <main class="main-vacunas">
+            <div class="vacunas margin-b">
+                <div class="aplicadas">
+                    <h3>Aplicadas</h3>
+                    <button class="btn-vacunas" onclick="agregarVacuna()"><i class="fa-solid fa-circle-plus"></i></button>
+                </div>
+                <div class="inf-vacunas-aplicadas">
+                    <p><strong>Fecha:</strong> 12/05/2026</p>
+                    <p><strong>Lugar:</strong> Veterinaria UAQ</p>
+                    <p><strong>Médico:</strong> Dr. Eduardo Lozano</p>
+                    <p><strong>Vacuna:</strong> Parvovirus</p>
+                    <p><strong>Lote:</strong> PV-2082X</p>
+                    <p><strong>Próximo Refuerzo:</strong> 12/05/2026</p>
+                </div>
+            </div>
+
+            <div class="vacunas">
+                <div class="pendientes">
+                    <h3>Pendientes</h3>
+                </div>
+                <div class="inf-vacunas-pendientes">
+                    <p><strong>Fecha Límite:</strong> 20/07/2026</p>
+                    <p><strong>Lugar Estimado:</strong> Veterinaria UAQ</p>
+                    <p><strong>Vacuna:</strong> Antirrábica</p>
+                    
+                    <button class="btn-registrar" onclick="alert('Esta sección está en desarrollo.')">Registrar Aplicación</button>
+                </div>
+            </div>
+        </main>
+
+        <nav class="parte-inferior">
+            <a href="pantalla-principal.html" class="nav-btn"><i class="fa-solid fa-house"></i></a>
+            <a href="citas.html" class="nav-btn"><i class="fa-solid fa-calendar-days"></i></a>
+            <a href="#" class="nav-btn" onclick="alert('Esta sección está en desarrollo.')"><i class="fa-solid fa-comment-dots"></i></a>
+            <a href="#" class="nav-btn" onclick="alert('Esta sección está en desarrollo.')"><i class="fa-solid fa-user"></i></a>
+        </nav>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Mis Citas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#5eb55f">
+</head>
+<body>
+
+    <div class="pantalla-citas">
+        <header class="encabezado">
+            <a href="pantalla-principal.html" class="btn-regresar"><i class="fa-solid fa-arrow-left"></i></a>
+            <h2>Mis Citas</h2>
+            <span class="icono-huellita"><i class="fa-solid fa-paw"></i></span>
+        </header>
+
+        <main class="main-citas">
+            <div class="citas">
+                <div class="proximas-citas">
+                    <h3>Próximas Citas</h3>
+                    <button class="btn-citas" onclick="registrarAccion()"><i class="fa-solid fa-circle-plus"></i></button>
+                </div>
+                
+                <div class="info-citas">
+                    <p><strong>Fecha:</strong> 27/05/2026</p>
+                    <p><strong>Lugar:</strong> Veterinaria UAQ</p>
+                    <p><strong>Hora:</strong> 13:00 pm</p>
+                    <p><strong>Asunto:</strong> Vacuna Antirrábica</p>
+                </div>
+            </div>
+        </main>
+
+        <nav class="parte-inferior">
+            <a href="pantalla-principal.html" class="nav-btn"><i class="fa-solid fa-house"></i></a>
+            <a href="citas.html" class="nav-btn activo"><i class="fa-solid fa-calendar-days"></i></a> <a href="#" class="nav-btn" onclick="alert('Esta sección está en desarrollo.')"><i class="fa-solid fa-comment-dots"></i></a>
+            <a href="#" class="nav-btn" onclick="alert('Esta sección está en desarrollo.')"><i class="fa-solid fa-user"></i></a>
+        </nav>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

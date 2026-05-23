@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>VetCare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#5eb55f">
+</head>
+<body>
+
+    <div class="pantalla-inicio">
+        <header class="encabezado">
+            <div style="width: 24px;"></div> <h2>VetCare</h2>
+            <span class="icono-huellita"><i class="fa-solid fa-paw"></i></span>
+        </header>
+
+        <main class="contenido-inicio">
+            <div class="zona-mascotas">
+                <div class="mascota activa">
+                    <div class="foto-mascota"><img src="img/snoopy.webp" alt="Snoopy"></div>
+                    <span>Snoopy</span>
+                </div>
+                <div class="mascota">
+                    <div class="foto-mascota"><img src="img/luna.jpg" alt="Luna"></div>
+                    <span>Luna</span>
+                </div>
+                <div class="mascota">
+                    <div class="foto-mascota"><img src="img/pulguita.jpeg" alt="Pulguita"></div>
+                    <span>Pulguita</span>
+                </div>
+                <a href="nueva-mascota.html" class="mascota añadir">
+                    <div class="foto-mascota btn"><i class="fa-solid fa-plus"></i></div>
+                    <span>Añadir</span>
+                </a>
+            </div>
+
+            <div class="recordatorios">
+                <h3><i class="fa-solid fa-triangle-exclamation"></i> RECORDATORIO</h3>
+                <p>Mañana a las 13:00 pm Vacuna Antirrábica para Snoopy.</p>
+            </div>
+
+            <div class="informacion">
+                <div class="info-mascota">
+                    <img src="img/snoopy.webp" alt="Snoopy" class="info-foto">
+                    <div>
+                        <h3>Snoopy</h3>
+                        <p><strong>Peso:</strong> 15 kg &nbsp;&nbsp; <strong>Edad:</strong> 4 años &nbsp;&nbsp; <strong>Raza:</strong> Beagle</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rutinas">
+                <div class="rutina">
+                    <h3>RUTINA DE HOY</h3>
+                    <button class="icono-agregar-rutina" onclick="agregarRutina()"><i class="fa-solid fa-circle-plus"></i></button>
+                </div>
+                <label class="tarea">
+                    <input type="checkbox" checked>
+                    Desayuno 7:00 am
+                </label>
+                <label class="tarea">
+                    <input type="checkbox">
+                    Medicamento 1 pastilla 14:00 pm
+                </label>
+            </div>
+
+            <div class="accesos">
+                <a href="vacunas.html" class="apartado disponible">
+                    <i class="fa-solid fa-syringe" style="color: rgb(108, 169, 160);"></i>
+                    <span>Cartilla Vacunas</span>
+                </a>
+                <div class="apartado" onclick="registrarAccion()">
+                    <i class="fa-solid fa-file-medical" style="color: rgb(124, 142, 188);"></i>
+                    <span>Historial Médico</span>
+                </div>
+                <div class="apartado" onclick="registrarAccion()">
+                    <i class="fa-solid fa-bowl-rice" style="color: rgb(188, 124, 175);"></i>
+                    <span>Plan Nutrición</span>
+                </div>
+            </div>
+        </main>
+
+        <nav class="parte-inferior">
+            <a href="pantalla-principal.html" class="nav-btn activo"><i class="fa-solid fa-house"></i></a>
+            <a href="citas.html" class="nav-btn"><i class="fa-solid fa-calendar-days"></i></a>
+            <a href="#" class="nav-btn" onclick="alert('Esta sección está en desarrollo.')"><i class="fa-solid fa-comment-dots"></i></a>
+            <a href="#" class="nav-btn" onclick="alert('Esta sección está en desarrollo.')"><i class="fa-solid fa-user"></i></a>
+        </nav>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
